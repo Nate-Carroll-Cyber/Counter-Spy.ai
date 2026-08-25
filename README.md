@@ -1,9 +1,8 @@
-# 🕵️ Counter-Weasel — Agentic Counterintelligence
+# 🕵️ Counter-Artificial Intelligence Research & Counter-Measures
 ## Govern Every Prompt, Question Every Answer
 
 AI models exhibiting strategic misbehavior act like hostile intelligence
-assets — and counterintelligence doctrine for detecting, neutralizing, and
-exploiting those assets translates directly into detection signals and
+assets — and counterintelligence doctrine for detecting and neutralizing those assets translates directly into detection signals and
 controls for AI oversight.
 
 <img width="1920" height="1080" alt="Counter-Spy.ai logo" src="https://github.com/user-attachments/assets/ecbe1a4e-515c-4fad-979a-4906a737b345" />
