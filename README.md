@@ -57,3 +57,15 @@ flowchart LR
   X --> A[CSA AICM]
   X --> S[Google SAIF]
 ```
+
+## License & Attribution
+
+**Research & documentation** (including *Algorithmic Subversion & Strategic
+Deception* and companion documents) © Nate Carroll, licensed under
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You may share and
+adapt with attribution to **Nate Carroll (Nate-Carroll-Cyber)**.
+
+**Excluded from the above license:**
+- The Counter-Spy.ai badge/logo — all rights reserved. Not licensed for reuse.
+- The **"Counter-Spy.ai"** name and mark — used to identify this project;
+  no trademark rights are granted under the CC license above.
