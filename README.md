@@ -61,9 +61,9 @@ flowchart LR
 ## License & Attribution
 
 **Research & documentation** (including *Algorithmic Subversion & Strategic
-Deception* and companion documents) © Nate Carroll, licensed under
+Deception* and companion documents) © Counter-Spy.ai, licensed under
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You may share and
-adapt with attribution to **Nate Carroll (Nate-Carroll-Cyber)**.
+adapt with attribution to **Counter-Spy.ai (Nate Carroll)**.
 
 **Excluded from the above license:**
 - The Counter-Spy.ai badge/logo — all rights reserved. Not licensed for reuse.
