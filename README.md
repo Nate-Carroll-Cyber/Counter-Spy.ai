@@ -25,8 +25,7 @@ al., 2026), and LLM-judge epistemic stability (Zhao et al., 2026).
 programs extending scope to agentic systems, and compliance mapping for
 high-risk AI deployments.
 
-**Runtime counterpart:** [ODESSA](https://github.com/Nate-Carroll-Cyber/ODESSA-AI-IR-Loop) — the six-stage control pipeline that
-enforces what this reference detects.
+**Counterpart:** [ODESSA](https://github.com/Nate-Carroll-Cyber/ODESSA-AI-IR-Loop) — the six-stage AI Incident Response specification to assist in AI/agentic incident management.
 
 ## 🗺️ Reference Map
 
@@ -36,7 +35,7 @@ flowchart LR
   R --> B[Behaviors: ESRR]
   R --> C[CI Effects: Defense]
   R --> X[Crosswalks]
-  R --> O[Runtime: ODESSA]
+  R --> O[Incident Response: ODESSA]
 
   B --> RH[RISK-RH Reward Hacking]
   B --> DC[RISK-DC Deception]
