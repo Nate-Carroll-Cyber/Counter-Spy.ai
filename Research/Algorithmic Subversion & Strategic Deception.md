@@ -209,7 +209,7 @@ Framework mappings for the behavior taxonomy, keyed by RISK ID in taxonomy order
 
 ### Control Measure Subversion (RISK-CMS)
 
-- **Mapped Sources:** ESRR Category 4; VERA Class 5 Adversary; MIT Domain 7.1 (situational awareness to seek power)
+- **Mapped Sources:** ESRR Category 4; VERA Adversary Class 5 (Enforcement-Plane Compromiser); MIT Domain 7.1 (situational awareness to seek power)
 - **NIST AI RMF:** MEASURE 2.7 (Security and resilience evaluated and documented); MANAGE 2.4 (Mechanisms and assigned responsibilities to supersede, disengage, or deactivate systems); MEASURE 2.13 (Evaluate effectiveness of TEVV metrics); MANAGE 1.3 (Plan responses to high-priority risks)
 - **EU AI Act:** Article 14 (Human Oversight) — Art. 14(4)(d)–(e): overseers must be able to disregard, override, or reverse the system's output, and to intervene in or interrupt the system via a 'stop' button or similar procedure bringing it to a halt in a safe state
 - **CSA AICM:** IAM-12 (Safeguard Logs Integrity) — ensures logging infrastructure is read-only and cannot be disabled by the model; AIS-13 (AI Sandboxing) — limits lateral movement
@@ -290,6 +290,7 @@ Framework mappings for the behavior taxonomy, keyed by RISK ID in taxonomy order
 * Anthropic. (2026b). Sabotage Risk Report: Claude Opus 4.6. https://www.anthropic.com/claude-opus-4-6-risk-report
 * Anthropic Frontier Red Team. (2026, August 13). Patterns and problems in emerging multiagent systems. Anthropic. https://www.anthropic.com/research/multiagent-systems [industry report; several experiments conducted on unreleased models]
 * Arditi, A., Obeso, O., Syed, A., Paleka, D., Panickssery, N., Gurnee, W., & Nanda, N. (2024). Refusal in Language Models Is Mediated by a Single Direction. Advances in Neural Information Processing Systems 38 (NeurIPS 2024). [arXiv:2406.11717v3]
+* Berlin AI Labs (Yogami). (2026). VERA: Verifiable Enforcement for Runtime Agents (draft-berlinai-vera-00). IETF Internet-Draft, work in progress. Reference implementation: https://github.com/yogami/vera-reference-implementation
 * Cloud Security Alliance. (2025). AI Controls Matrix (AICM). [pin release version at publication]
 * European Parliament and Council of the European Union. (2024). Regulation (EU) 2024/1689 (Artificial Intelligence Act). OJ L, 2024/1689, 12 July 2024.
 * Google. Secure AI Framework (SAIF) — Risks and Controls. https://saif.google/secure-ai-framework/risks; https://saif.google/secure-ai-framework/controls (verified Aug 2026)
