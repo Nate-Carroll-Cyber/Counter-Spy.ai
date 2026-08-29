@@ -321,4 +321,4 @@ Framework mappings for the behavior taxonomy, keyed by RISK ID in taxonomy order
 
 ---
 
-*Companion document: **CI Effects Against AI Attackers** (Deter / Degrade / Deceive / Deny / Detect) — the defensive posture a CI-informed defender takes against an AI attacker, and the Behavior × Effect viability matrix derived from it.*
+*Companion document: **Counter-AI Doctrine — AI & Autonomous Agents Defensive Playbook** (Deter / Degrade / Deceive / Deny / Detect) — the defensive posture a CI-informed defender takes against an AI attacker, and the Behavior × Effect viability matrix derived from it.*
