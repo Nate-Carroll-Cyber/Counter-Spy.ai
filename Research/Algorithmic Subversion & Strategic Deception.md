@@ -2,6 +2,10 @@
 
 Counterintelligence is the oldest institutional answer to a problem AI security has just inherited: extracting useful work from an agent whose cooperation cannot be verified and whose loyalty cannot be assumed. Decades of doctrine on elicitation, fabrication, double agents, and defection-in-place were built for exactly the behaviors now surfacing in frontier models under evaluation.
 
+<p align="center">
+<img width="254" height="254" alt="Gemini_Generated_Image_2hsl382hsl382hsl" src="https://github.com/user-attachments/assets/c1c4b787-dffb-4a22-90d2-86cb1b0127db" />
+</p>
+
 The mapping below is deliberate and bounded: counterintelligence's recognition-and-reporting apparatus maps cleanly onto these behaviors, and every category has a doctrinal ancestor. Its *offensive* apparatus does not transfer as cleanly — the cheapest lever against a human adversary, deterrence, is largely inert against an attacker that articulates a trap and exploits it anyway. That asymmetry, and the defensive posture that survives it, are developed in the companion document, **CI Effects Against AI Attackers**. This document covers the behavior taxonomy only.
 
 ### The contemporary security landscape is undergoing a fundamental transformation as the locus of strategic competition shifts from physical domains to the cognitive and computational spheres, which introduces a novel spectrum of vulnerabilities categorized as Emergent Strategic Reasoning Risks (ESRRs) (Kumarage et al., 2026).
