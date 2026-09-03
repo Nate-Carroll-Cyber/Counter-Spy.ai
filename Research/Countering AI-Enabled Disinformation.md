@@ -545,3 +545,7 @@ Each exercise should test detection, evidence preservation, decision authority, 
 
 - Carroll, N. (2026). *Algorithmic subversion & strategic deception*. [https://github.com/Nate-Carroll-Cyber/Counter-Spy.ai/blob/main/Research/Algorithmic%20Subversion%20%26%20Strategic%20Deception.md](https://github.com/Nate-Carroll-Cyber/Counter-Spy.ai/blob/main/Research/Algorithmic%20Subversion%20%26%20Strategic%20Deception.md).
 - Carroll, N. (2026). *ODESSA — AI incident response loop*. [https://github.com/Nate-Carroll-Cyber/ODESSA-AI-IR-Loop](https://github.com/Nate-Carroll-Cyber/ODESSA-AI-IR-Loop).
+
+## License
+
+Research & documentation (including Countering AI-Enabled Disinformation and other research documents) © Counter-Spy.ai, licensed under CC BY 4.0. You may share and adapt with attribution to Counter-Spy.ai (Nate Carroll).
