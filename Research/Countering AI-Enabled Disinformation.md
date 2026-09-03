@@ -1,4 +1,4 @@
-# Societal Resilience Against AI-Enabled Disinformation (In-Development)
+# Countering AI-Enabled Disinformation (In Development)
 
 ## Executive summary
 
