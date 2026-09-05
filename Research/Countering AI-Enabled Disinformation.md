@@ -1,5 +1,9 @@
 # Countering AI-Enabled Disinformation (In Development)
 
+<p align="center">
+<img width="350" height="350" alt="Gemini_Generated_Image_4rrym14rrym14rry" src="https://github.com/user-attachments/assets/05813b1b-b064-4ce5-8c4b-3ed3309fce0f" />
+</p>
+
 ## Executive summary
 
 Generative AI can reduce the time and labor needed to produce, translate, personalize, and vary persuasive content. It can also automate parts of targeting, testing, and distribution. These capabilities can increase the speed, scale, and personalization of existing influence methods, but they do not make every campaign effective. Outcomes still depend on the audience, context, channel, source credibility, repetition, and the decisions that platforms and institutions make. The Center for Security and Emerging Technology describes AI as an amplifier of current disinformation techniques rather than a wholly separate class of influence operation ([CSET, 2021](https://cset.georgetown.edu/publication/ai-and-the-future-of-disinformation-campaigns-2/)).
