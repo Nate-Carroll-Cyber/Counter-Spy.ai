@@ -212,6 +212,10 @@ Production is where a narrative becomes a media product and acquires an apparent
 | Personalization | Personalized LLM dialogue can outperform human persuasion in a controlled debate setting, with important statistical and external-validity limits ([Salvi et al., 2025](https://www.nature.com/articles/s41562-025-02194-6)). | Minimize exposure of personal data and train responders for interactive, adaptive approaches. |
 | Credential ambiguity | A valid signature proves that a key signed assertions. It does not prove the assertions are true. | Govern signing identities, trust lists, revocation, and publication channels. |
 
+## The liar's dividend
+
+A second-order effect of realistic synthetic media is that the mere possibility of fabrication lets a bad actor dismiss authentic material as fake. Chesney and Citron named this the liar's dividend and observed that it can grow as public awareness of synthetic media grows ([Chesney and Citron, 2019, law review](https://www.californialawreview.org/print/deep-fakes-a-looming-challenge-for-privacy-democracy-and-national-security)). The effect is now measured rather than only asserted, and the measured version is bounded. In five preregistered survey experiments with more than 15,000 US adults, false claims that a real scandal was fake news or a deepfake raised politician support across partisan groups, and did so more than an apology or silence. The same experiments found the strategy worked against text-based scandal reports but was largely ineffective against video evidence, and did not reduce general trust in media ([Schiff et al., 2025, peer-reviewed](https://doi.org/10.1017/S0003055423001454)). Defenders should therefore treat the liar's dividend as a real accountability-evasion tactic while resisting the broader claim that synthetic media has already dissolved shared trust in evidence. The narrower finding also points to a control, since **preserved provenance and a verifiable canonical original make a false fabrication claim harder to sustain against genuine material.**
+
 ## DISARM tactics - Production
 
 | Tactic | Techniques | Defensive use |
@@ -311,7 +315,11 @@ Distribution is where content reaches an audience, is repeated, moves between pl
 | Interactive pressure | Multi-turn systems can personalize, adapt, and continue a conversation after a user resists. | Test defenses over long conversations and repeated sessions. |
 | Machine-audience instability | Automated evaluators and agents can be influenced by contaminated context or adversarial pressure. Evidence in this area is developing. | Use deterministic validation, independent checks, and bounded authority for machine decisions. |
 
-The previous draft's claim that network release requires roughly 30 percent malicious-account control and saturates near 45 percent is not retained. No traceable external source was identified for that threshold, and such a value would depend heavily on network structure, platform design, recommendation systems, content, and model assumptions.
+## News deserts and algorithmic local news
+
+That vacuum is increasingly filled by networks of algorithmically generated sites, often called pink slime, that adopt the look and naming conventions of local papers while advancing an undisclosed political agenda. An industry tally identified more than a thousand such outlets, exceeding the number of surviving US daily newspapers ([NewsGuard, 2024, industry report](https://www.newsguardtech.com/)). These sites typically do not fabricate stories outright. They repackage press releases, crime data, and campaign-finance records, which makes the true-versus-false test the wrong lens. The question is source trustworthiness, not factual accuracy of any single item.
+
+Media literacy is a weaker defense here than usually assumed. In a working-paper study, participants chose between real and algorithmically generated local sites for their own state. After a digital-literacy tip sheet, 41 percent still preferred the algorithmic site, against 46 percent in an untreated control, so the intervention moved choice by only about five points even though treated participants cited credibility cues nearly three times as often. Preference tracked perceived bias and topic, not journalistic-credibility features. Ad clutter mattered, with participants who complained about ads 20 percent less likely to choose the real site, and a name that merely sounded local raised preference. The authors also note that raising general media trust lifts trust in fake and real sites alike, so it does not by itself improve discernment ([DeLuca and Beavers, 2025, working paper](https://isps.yale.edu/news/2025-09-16-study-people-often-trust-fake-local-news-sites-more-than-real-ones-yale-political)). The durable finding, that audiences treat a local cue in a source's name as a proxy for credibility, is corroborated by peer-reviewed survey experiments ([Moore et al., 2023, peer-reviewed](https://doi.org/10.1177/19401612231210220)).
 
 ## DISARM tactics - Distribution
 
@@ -374,7 +382,7 @@ Experts disagree on where responsibility sits. Fact checkers placed significantl
 
 ### Disclosure and labeling
 
-Article 50 of the EU AI Act establishes transparency duties for certain AI systems and synthetic content. Legal disclosure is a compliance obligation. It should not be treated as proof that a label will prevent belief, sharing, fraud, or unsafe action ([EU AI Act, consolidated text as of 27 July 2026](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02024R1689-20260727)).
+Article 50 of the EU AI Act establishes transparency duties for certain AI systems and synthetic content. Legal disclosure is a compliance obligation. It should not be treated as proof that a label will prevent belief, sharing, fraud, or unsafe action ([EU AI Act, consolidated text as of 27 July 2026](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02024R1689-20260727)). Experimental evidence supports treating disclosure as insufficient on its own. Three preregistered experiments found that participants continued to rely on the content of a deepfake video, including a fabricated clip of a local official confessing to a bribe, even after an explicit warning that the video was fake, and even among those who said they believed the warning. The authors report that the warning reduced the video's influence but did not remove it ([Clark and Lewandowsky, 2026, peer-reviewed](https://www.nature.com/articles/s44271-025-00381-9)).
 
 - [ ] Use labels that explain the basis for the claim, such as signed provenance, platform disclosure, model metadata, or forensic assessment.
 - [ ] Distinguish "AI-generated," "AI-edited," "unverified," "altered," and "false." These terms are not interchangeable.
@@ -527,7 +535,9 @@ Each exercise should test detection, evidence preservation, decision authority, 
 
 - Baribi-Bartov, S., et al. 2024. *Supersharers of Fake News on Twitter*. Science. [DOI](https://www.science.org/doi/10.1126/science.adl4435).
 - Cinelli, M., et al. 2021. *The Echo Chamber Effect on Social Media*. Proceedings of the National Academy of Sciences. [DOI](https://www.pnas.org/doi/10.1073/pnas.2023301118).
+- Clark, S., and Lewandowsky, S. 2026. *The Continued Influence of AI-Generated Deepfake Videos Despite Transparency Warnings*. Communications Psychology 4:13. [DOI](https://www.nature.com/articles/s44271-025-00381-9).
 - Fazio, L. K., et al. 2020. *The Effect of Repetition on Truth Judgments Across Development*. Psychological Science. [PubMed](https://pubmed.ncbi.nlm.nih.gov/32857670/).
+- Gao, P., Lee, C., and Murphy, D. 2020. *Financing Dies in Darkness? The Impact of Newspaper Closures on Public Finance*. Journal of Financial Economics 135(2), 445-467. [DOI](https://doi.org/10.1016/j.jfineco.2019.05.001).
 - Gebru, T., et al. 2021. *Datasheets for Datasets*. Communications of the ACM. [DOI](https://doi.org/10.1145/3458723).
 - Huang, G., Zhang, Y., Li, Z., You, Y., Wang, M., and Yang, Z. 2024. *Are AI-Generated Text Detectors Robust to Adversarial Perturbations?*. Proceedings of ACL. [ACL Anthology](https://aclanthology.org/2024.acl-long.327/).
 - Kruger, A., Saletta, M., Ahmad, A., and Howe, P. 2024. *Structured Expert Elicitation on Disinformation, Misinformation, and Malign Influence: Barriers, Strategies, and Opportunities*. Harvard Kennedy School Misinformation Review 5(7). [DOI](https://doi.org/10.37016/mr-2020-169).
@@ -535,16 +545,27 @@ Each exercise should test detection, evidence preservation, decision authority, 
 - Maertens, R., et al. 2025. *Psychological Booster Shots Targeting Memory Increase Long-Term Resistance Against Misinformation*. Nature Communications. [Article](https://www.nature.com/articles/s41467-025-57205-x).
 - Martel, C., Pennycook, G., and Rand, D. G. 2020. *Reliance on Emotion Promotes Belief in Fake News*. Cognitive Research: Principles and Implications. [DOI](https://doi.org/10.1186/s41235-020-00252-3).
 - McLoughlin, K. L., et al. 2024. *Misinformation Exploits Outrage to Spread Online*. Science. [DOI](https://www.science.org/doi/10.1126/science.adl2829).
+- Moore, R. C., et al. 2023. *How Sticky Is Pink Slime? Assessing the Credibility of Deceptive Local Media*. The International Journal of Press/Politics. [DOI](https://doi.org/10.1177/19401612231210220).
 - Pennycook, G., et al. 2021. *Shifting Attention to Accuracy Can Reduce Misinformation Online*. Nature. [Article](https://www.nature.com/articles/s41586-021-03344-2).
 - Salvi, F., et al. 2025. *On the Conversational Persuasiveness of GPT-4*. Nature Human Behaviour. [Article](https://www.nature.com/articles/s41562-025-02194-6).
+- Schiff, K. J., Schiff, D. S., and Bueno, N. S. 2025. *The Liar's Dividend: Can Politicians Claim Misinformation to Evade Accountability?*. American Political Science Review 119(1), 71-90. [DOI](https://doi.org/10.1017/S0003055423001454).
 - Simchon, A., Zipori, T., Teitelbaum, L., Lewandowsky, S., and van der Linden, S. 2026. *A Signal Detection Theory Meta-Analysis of Psychological Inoculation Against Misinformation*. Current Opinion in Psychology. [DOI](https://doi.org/10.1016/j.copsyc.2025.102194).
 - Weikmann, T., Wouters, F., Tulin, M., Hameleers, M., de Vreese, C. H., Zarouali, B., and Opgenhaffen, M. 2026. *On the Same Page? Experts Are Mostly, but Not Always Aligned About Disinformation in Times of Generative AI*. Harvard Kennedy School Misinformation Review 7(2). [DOI](https://doi.org/10.37016/mr-2020-196).
 - Williams, M., et al. 2025. *On Targeted Manipulation and Deception When Optimizing LLMs for User Feedback*. ICLR 2025. [Paper](https://arxiv.org/abs/2411.02306).
 - Zou, W., Geng, R., Wang, B., and Jia, J. 2025. *PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models*. USENIX Security 2025. [USENIX](https://www.usenix.org/conference/usenixsecurity25/presentation/zou-poisonedrag).
 
-## Working paper
+## Working papers
 
 - Campante, F., Durante, R., Hagemeister, F., and Sen, A. 2025. *GenAI Misinformation, Trust, and News Consumption: Evidence from a Field Experiment*. CEPR Discussion Paper 20526 and NBER Working Paper 34100. [CEPR](https://cepr.org/publications/dp20526).
+- DeLuca, K., and Beavers, D. 2025. *Study on preference between real and algorithmically generated local news sites and the effect of digital media literacy* (working paper; figures reported via the Yale ISPS summary). [ISPS summary](https://isps.yale.edu/news/2025-09-16-study-people-often-trust-fake-local-news-sites-more-than-real-ones-yale-political).
+
+## Law review
+
+- Chesney, R., and Citron, D. K. 2019. *Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security*. California Law Review 107, 1753. [Article](https://www.californialawreview.org/print/deep-fakes-a-looming-challenge-for-privacy-democracy-and-national-security).
+
+## Industry report
+
+- NewsGuard. 2024. *Tracking AI-enabled and pink slime local news outlets* (outlet tally). [NewsGuard](https://www.newsguardtech.com/).
 
 ## Preprints and emerging evidence
 
