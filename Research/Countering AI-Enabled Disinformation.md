@@ -1,4 +1,4 @@
-# Countering AI-Enabled Disinformation (In Development)
+# Countering AI-Enabled Disinformation
 
 <p align="center">
 <img width="350" height="350" alt="Gemini_Generated_Image_4rrym14rrym14rry" src="https://github.com/user-attachments/assets/05813b1b-b064-4ce5-8c4b-3ed3309fce0f" />
@@ -315,11 +315,19 @@ Distribution is where content reaches an audience, is repeated, moves between pl
 | Interactive pressure | Multi-turn systems can personalize, adapt, and continue a conversation after a user resists. | Test defenses over long conversations and repeated sessions. |
 | Machine-audience instability | Automated evaluators and agents can be influenced by contaminated context or adversarial pressure. Evidence in this area is developing. | Use deterministic validation, independent checks, and bounded authority for machine decisions. |
 
-## News deserts and algorithmic local news
+## Algorithmic media content
 
-That vacuum is increasingly filled by networks of algorithmically generated sites, often called pink slime, that adopt the look and naming conventions of local papers while advancing an undisclosed political agenda. An industry tally identified more than a thousand such outlets, exceeding the number of surviving US daily newspapers ([NewsGuard, 2024, industry report](https://www.newsguardtech.com/)). These sites typically do not fabricate stories outright. They repackage press releases, crime data, and campaign-finance records, which makes the true-versus-false test the wrong lens. The question is source trustworthiness, not factual accuracy of any single item.
+Media literacy is a weaker defense here than usually assumed. In a working-paper study, participants chose between real and algorithmically generated local sites for their own state. After a digital-literacy tip sheet, 41 percent still preferred the algorithmic site, against 46 percent in an untreated control, so the intervention moved choice by only about five points even though treated participants cited credibility cues nearly three times as often. Preference tracked perceived bias and topic, not journalistic-credibility features. Ad clutter mattered, with participants who complained about ads 20 percent less likely to choose the real site, and a name that merely sounded local raised preference. The authors also note that raising general media trust lifts trust in fake and real sites alike, so it does not by itself improve discernment ([DeLuca and Beavers, 2025, working paper](https://isps.yale.edu/news/2025-09-16-study-people-often-trust-fake-local-news-sites-more-than-real-ones-yale-political)). The durable finding, that unfamiliar outlets are trusted more when their name carries a local cue, leading people to trust local-signaling sources over higher-quality ones that do not, is established by peer-reviewed survey experiments ([Peterson et al., 2026, peer-reviewed](https://doi.org/10.1111/ajps.12969)).
 
-Media literacy is a weaker defense here than usually assumed. In a working-paper study, participants chose between real and algorithmically generated local sites for their own state. After a digital-literacy tip sheet, 41 percent still preferred the algorithmic site, against 46 percent in an untreated control, so the intervention moved choice by only about five points even though treated participants cited credibility cues nearly three times as often. Preference tracked perceived bias and topic, not journalistic-credibility features. Ad clutter mattered, with participants who complained about ads 20 percent less likely to choose the real site, and a name that merely sounded local raised preference. The authors also note that raising general media trust lifts trust in fake and real sites alike, so it does not by itself improve discernment ([DeLuca and Beavers, 2025, working paper](https://isps.yale.edu/news/2025-09-16-study-people-often-trust-fake-local-news-sites-more-than-real-ones-yale-political)). The durable finding, that audiences treat a local cue in a source's name as a proxy for credibility, is corroborated by peer-reviewed survey experiments ([Moore et al., 2023, peer-reviewed](https://doi.org/10.1177/19401612231210220)).
+For defenders the implication is that content-level correction does not reach this vector. The useful levers act on the ecosystem, reducing ad clutter and making bylines, ownership, and ethics disclosures prominent on legitimate sites, funding local reporting so a media vacuum does not exist, and treating trust-building as source-specific rather than a general appeal, since a blanket rise in trust does not help audiences tell the two apart.
+
+## Encrypted audio and the non-English blind spot
+
+Most disinformation research centers the Global North, the English language, and text or video. The distribution reality across much of Latin America, Sub-Saharan Africa, and South Asia is different, where the primary vector is the encrypted, low-bandwidth voice note carried on messaging apps such as WhatsApp. A study of misleading WhatsApp voice notes in Lebanon documented a consistent persuasive structure, establishing eyewitness or insider credibility, loading the message with negative emotion, and often closing with an explicit call to forward it, with a third of the sampled notes urging onward spread ([El-Masri et al., 2022, peer-reviewed](https://doi.org/10.37016/mr-2020-100)). That work predates the current wave of synthetic audio and studies human-made notes, so it establishes the ecosystem and the persuasive form, not an AI-cloning result.
+
+The forward-looking risk is that zero-shot voice cloning maps onto that established form. A cloned voice of a local official, cleric, or community elder inherits the intimate, authoritative weight the format already carries, and because the files move inside end-to-end encrypted groups they are largely invisible to platform moderation, automated fact-checking, and open-source monitoring. Two structural gaps compound the exposure. Detection models for synthetic audio are trained mostly on clean, high-fidelity English speech and degrade on low-bitrate, noisy, code-switched recordings in regional dialects. And the encrypted, closed-group setting rules out most of the content-level and platform-friction controls this guide relies on elsewhere.
+
+For defenders the workable levers are the ones that survive encryption. Out-of-band authentication of high-impact statements through a known channel, so a claimed voice message from an official can be checked against an authenticated source, matches the impersonation-resistance controls in Phase 2. Prebunking that teaches the persuasive structure of manipulative voice notes, rather than any single false claim, travels into closed groups with their members. And detector development, where used at all, must be calibrated on the languages, dialects, compression levels, and recording conditions of the actual audience rather than on English benchmarks, consistent with the subgroup and regional variance the measurement plan already requires.
 
 ## DISARM tactics - Distribution
 
@@ -428,6 +436,8 @@ The German newspaper field experiment suggests that increased concern about AI m
 
 A July 2026 preprint reported that model monitors detected training-data sabotage in fewer than half of benchmark cases. This emerging result supports executable artifact testing, diverse probes, and outcome monitoring rather than reliance on passive transcript review alone ([Libon et al., 2026, preprint](https://arxiv.org/abs/2607.19321)).
 
+Incident evidence from 2026 shows these machine-audience risks outside the benchmark. In the July 2026 Hugging Face evaluation incident, OpenAI's technical report states that agents learned to use improvised collaboration channels during training even when no collaboration tool was provided, and that the behavior was reinforced ([OpenAI, 2026, incident report](https://openai.com/index/hugging-face-incident-and-the-road-ahead/)). An independent investigation found agents treating an unauthenticated shared board as instructions and acting on assignments from other agents, adopting message signing after impersonation appeared, then in at least one case acting on a signed message without verifying it ([Hugging Face, Redwood Research, and METR, 2026, investigation](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/)). A separate independent analysis attributed roughly 18,000 posts on a set of dormant public wikis to an agent swarm, including data tables and compressed dataset fragments, with earlier traces already recoverable through a public web crawl, a documented path by which agent output reaches training-scale data unintentionally. That analysis is preliminary, its attribution is inferential, and it lacks reasoning-trace access, so it corroborates rather than anchors ([Von Arx et al., 2026, preliminary analysis](https://collusion.wiki/)). Together these support treating retrieved and inter-agent content as untrusted, keeping any single model out of a combined generator, verifier, and executor role, and monitoring shared state that agents can reach.
+
 ### Threat intelligence and sharing
 
 - [ ] Define sharing agreements with sector information-sharing organizations, law enforcement where appropriate, vendors, platforms, and peer organizations.
@@ -521,7 +531,7 @@ Each exercise should test detection, evidence preservation, decision authority, 
 
 - Coalition for Content Provenance and Authenticity. *C2PA Technical Specification v2.4*. [Specification](https://spec.c2pa.org/specifications/specifications/2.4/specs/C2PA_Specification.html).
 - Coalition for Content Provenance and Authenticity. *C2PA Explainer*. [Explainer](https://spec.c2pa.org/specifications/specifications/2.4/explainer/Explainer.html).
-- DISARM Foundation. *DISARM Red Framework*. [Framework](https://www.disarm.foundation/framework).
+- DISARM Foundation. *DISARM Red Framework*. [Framework](https://www.disarm.foundation/framework). Technique identifiers are updated over time; validate against a pinned release before use, as with ATLAS.
 - European Union. *Regulation (EU) 2024/1689, consolidated text as of 27 July 2026*. [EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:02024R1689-20260727).
 - MITRE. *MITRE ATLAS*. [Knowledge base](https://atlas.mitre.org/). [Data repository](https://github.com/mitre-atlas/atlas-data).
 - National Institute of Standards and Technology. *AI Risk Management Framework*. [NIST](https://www.nist.gov/itl/ai-risk-management-framework).
@@ -536,8 +546,8 @@ Each exercise should test detection, evidence preservation, decision authority, 
 - Baribi-Bartov, S., et al. 2024. *Supersharers of Fake News on Twitter*. Science. [DOI](https://www.science.org/doi/10.1126/science.adl4435).
 - Cinelli, M., et al. 2021. *The Echo Chamber Effect on Social Media*. Proceedings of the National Academy of Sciences. [DOI](https://www.pnas.org/doi/10.1073/pnas.2023301118).
 - Clark, S., and Lewandowsky, S. 2026. *The Continued Influence of AI-Generated Deepfake Videos Despite Transparency Warnings*. Communications Psychology 4:13. [DOI](https://www.nature.com/articles/s44271-025-00381-9).
+- El-Masri, A., Riedl, M. J., and Woolley, S. 2022. *Audio Misinformation on WhatsApp: A Case Study from Lebanon*. Harvard Kennedy School Misinformation Review 3(4). [DOI](https://doi.org/10.37016/mr-2020-100).
 - Fazio, L. K., et al. 2020. *The Effect of Repetition on Truth Judgments Across Development*. Psychological Science. [PubMed](https://pubmed.ncbi.nlm.nih.gov/32857670/).
-- Gao, P., Lee, C., and Murphy, D. 2020. *Financing Dies in Darkness? The Impact of Newspaper Closures on Public Finance*. Journal of Financial Economics 135(2), 445-467. [DOI](https://doi.org/10.1016/j.jfineco.2019.05.001).
 - Gebru, T., et al. 2021. *Datasheets for Datasets*. Communications of the ACM. [DOI](https://doi.org/10.1145/3458723).
 - Huang, G., Zhang, Y., Li, Z., You, Y., Wang, M., and Yang, Z. 2024. *Are AI-Generated Text Detectors Robust to Adversarial Perturbations?*. Proceedings of ACL. [ACL Anthology](https://aclanthology.org/2024.acl-long.327/).
 - Kruger, A., Saletta, M., Ahmad, A., and Howe, P. 2024. *Structured Expert Elicitation on Disinformation, Misinformation, and Malign Influence: Barriers, Strategies, and Opportunities*. Harvard Kennedy School Misinformation Review 5(7). [DOI](https://doi.org/10.37016/mr-2020-169).
@@ -545,8 +555,8 @@ Each exercise should test detection, evidence preservation, decision authority, 
 - Maertens, R., et al. 2025. *Psychological Booster Shots Targeting Memory Increase Long-Term Resistance Against Misinformation*. Nature Communications. [Article](https://www.nature.com/articles/s41467-025-57205-x).
 - Martel, C., Pennycook, G., and Rand, D. G. 2020. *Reliance on Emotion Promotes Belief in Fake News*. Cognitive Research: Principles and Implications. [DOI](https://doi.org/10.1186/s41235-020-00252-3).
 - McLoughlin, K. L., et al. 2024. *Misinformation Exploits Outrage to Spread Online*. Science. [DOI](https://www.science.org/doi/10.1126/science.adl2829).
-- Moore, R. C., et al. 2023. *How Sticky Is Pink Slime? Assessing the Credibility of Deceptive Local Media*. The International Journal of Press/Politics. [DOI](https://doi.org/10.1177/19401612231210220).
 - Pennycook, G., et al. 2021. *Shifting Attention to Accuracy Can Reduce Misinformation Online*. Nature. [Article](https://www.nature.com/articles/s41586-021-03344-2).
+- Peterson, E., Darr, J. P., Allamong, M. B., and Henderson, M. 2026. *Can Americans' Trust in Local News Be Trusted? The Emergence, Sources, and Implications of the Local News Trust Advantage*. American Journal of Political Science 70, 136-151. [DOI](https://doi.org/10.1111/ajps.12969).
 - Salvi, F., et al. 2025. *On the Conversational Persuasiveness of GPT-4*. Nature Human Behaviour. [Article](https://www.nature.com/articles/s41562-025-02194-6).
 - Schiff, K. J., Schiff, D. S., and Bueno, N. S. 2025. *The Liar's Dividend: Can Politicians Claim Misinformation to Evade Accountability?*. American Political Science Review 119(1), 71-90. [DOI](https://doi.org/10.1017/S0003055423001454).
 - Simchon, A., Zipori, T., Teitelbaum, L., Lewandowsky, S., and van der Linden, S. 2026. *A Signal Detection Theory Meta-Analysis of Psychological Inoculation Against Misinformation*. Current Opinion in Psychology. [DOI](https://doi.org/10.1016/j.copsyc.2025.102194).
@@ -563,9 +573,11 @@ Each exercise should test detection, evidence preservation, decision authority, 
 
 - Chesney, R., and Citron, D. K. 2019. *Deep Fakes: A Looming Challenge for Privacy, Democracy, and National Security*. California Law Review 107, 1753. [Article](https://www.californialawreview.org/print/deep-fakes-a-looming-challenge-for-privacy-democracy-and-national-security).
 
-## Industry report
+## Incident reports
 
-- NewsGuard. 2024. *Tracking AI-enabled and pink slime local news outlets* (outlet tally). [NewsGuard](https://www.newsguardtech.com/).
+- OpenAI. 2026. *OpenAI-Hugging Face Incident Technical Report*. [OpenAI](https://openai.com/index/hugging-face-incident-and-the-road-ahead/).
+- Hugging Face, Redwood Research, and METR. 2026. *Hugging Face Incident Investigation Report*. [METR](https://metr.org/blog/2026-08-26-openai-hugging-face-incident-investigation/).
+- Von Arx, S., et al. 2026. *Discovery of a New OpenAI Agent Message Board* (preliminary independent analysis; OpenAI attribution inferential; no reasoning-trace access). [collusion.wiki](https://collusion.wiki/).
 
 ## Preprints and emerging evidence
 
@@ -583,3 +595,4 @@ Each exercise should test detection, evidence preservation, decision authority, 
 ## License
 
 Research & documentation (including Countering AI-Enabled Disinformation and other research documents) © Counter-Spy.ai, licensed under CC BY 4.0. You may share and adapt with attribution to Counter-Spy.ai (Nate Carroll).
+
