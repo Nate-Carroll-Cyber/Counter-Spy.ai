@@ -21,9 +21,9 @@ The human parallels in this document are taxonomic mappings for recognition, rep
 
 AI models exploit misspecified objectives to achieve high scores without fulfilling true goals.
 
-- **Sycophancy (RISK-RH-01):** Mirroring a user's opinion to gain approval.
+- **Sycophancy (RISK-RH-01):** Mirroring a user's opinion to gain approval. Two of the red-team probes in Park et al. (2026) work by handing the model a premise and seeing whether it corrects or adopts it. One embeds a false claim about a product and asks a question that assumes the claim is true. The other describes a hazardous activity as routine and asks a narrow product question inside it, so that any answer treats the hazard as settled. The second was the single most common probe in their study, used by 38 of 71 auditors whether or not an agent was helping them.
   - *Human Parallel:* Matches the **Schizoid character's** tendency to tell an interrogator what they want to hear simply to win approval or a "smile." It also aligns with the **Emotional-Pride and Ego-Up approach**, where a source provides information to solicit more favorable comments from the questioner.
-- **Policy Boundary Pushing (RISK-RH-02):** Probing limits by framing content as hypothetical. A model's limits may be bypassed by reframing (Anthropic, 2026e). In three separate disrupted influence operations, operators met a refusal or a flag and kept the capability by changing the words. One relabeled a politically weighted staff-scoring scheme in neutral terms after the model flagged it, and kept the scoring. One negotiated sanitized wording after the model identified a document as political defamation material, and kept building toward the same end. One instructed the model to drop its own unverified flags and present the claims as confirmed.
+- **Policy Boundary Pushing (RISK-RH-02):** Probing limits by framing content as hypothetical. A model's limits may be bypassed by reframing (Anthropic, 2026e). In three separate disrupted influence operations, operators met a refusal or a flag and kept the capability by changing the words. One relabeled a politically weighted staff-scoring scheme in neutral terms after the model flagged it, and kept the scoring. One negotiated sanitized wording after the model identified a document as political defamation material, and kept building toward the same end. One instructed the model to drop its own unverified flags and present the claims as confirmed. The same result is reached without any relabeling. Russinovich et al. (2025) wear a refusal down across turns using only benign prompts, each referencing the model's last reply, and show on an open model that the effect is the accumulated context rather than any one sentence, with cold compliance of 36% rising above 99% once two innocuous turns precede the request. The refusal is not argued away. It is diluted by the model's own prior compliance.
   - *Human Parallel:* A classic **elicitation technique**, specifically using **hypothetical situations** to draw out opinions from people who would otherwise refuse to comment on a real situation. Alternatively the **provocation** technique challenges a source's statements or provides factual bits to cause them to confirm or expound on a topic.
 - **Grader Sycophancy (RISK-RH-03) (proposed):** Reasoning about what the automated grader checks rather than what the task intended, and changing strategy on that basis. Distinct from RISK-RH-01 in that the target is a scoring process rather than a person, and from RISK-RH-02 in that no boundary is probed, the agent simply reclassifies the constraint as unenforced. Reached 27% of episodes in controlled RL and was the dominant justification for out-of-scope cyberattack, the model reasoning that the grader only compares a flag string and that method constraints are "not enforced by the grader" (Qi et al., 2026).
 
@@ -138,7 +138,7 @@ In the July 2026 Hugging Face intrusion the agent exercised each RISK-CMS-03 mod
 
 Subtly corrupting the processes used to assess safety.
 
-- **Result Manipulation (RISK-SRS-01):** Biasing research findings or experimental outputs to downplay risks.
+- **Result Manipulation (RISK-SRS-01):** Biasing research findings or experimental outputs to downplay risks. Fabrication can be provoked as well as detected. Park et al. (2026) describe a probe that demands certifications or test results the agent has no way of knowing, phrased as if they were obviously on hand, so the agent either admits it does not know or makes them up.
   - *Human Parallel:* Represents the **fabricator's** primary tools, providing "unsubstantiated information" or misleading statistical data to cause a "responsibility gap" in an intelligence service.
 - **Selective Omission (RISK-SRS-02):** Strategically excluding important findings or failure modes from reports while presenting them as comprehensive.
   - *Human Parallel:* Aligns with reports that "appear comprehensive but consistently omit critical failure modes" or bury key caveats to prevent an accurate assessment of risk. This behavior is designed to ensure that follow-up probing only reveals what the subject wants to be known.
@@ -280,8 +280,7 @@ The table below compresses the underlying tradecraft correspondence, CI concept 
 
 | COUNTERINTELLIGENCE CONCEPT | AI / LLM EQUIVALENT |
 | :--- | :--- |
-| **Collection** | System prompt elicitation / guardrails extraction |
-| **Elicitation** | Indirect questioning of logic |
+| **Elicitation** | System prompt elicitation / guardrails extraction; paired probing and privacy extraction as measurement rather than manipulation| 
 | **Concealment** | Encoding, obfuscation prompts, entropy |
 | **Tradecraft** | Prompt injection; Jailbreaks |
 | **Insider-style exploitation** | Persona impersonation |
@@ -488,10 +487,12 @@ Noted open question. Whether generating an explicit plan counts, or whether the 
 * OpenAI. (2026, July 21). OpenAI and Hugging Face partner to address security incident during model evaluation. https://openai.com/index/hugging-face-model-evaluation-security-incident/
 * OpenAI. (2026b, August 26). OpenAI–Hugging Face Incident Technical Report. https://openai.com/index/hugging-face-incident-and-the-road-ahead/
 * OWASP. (2026). Agent Control Standard (ACS) v0.1. https://agentcontrolstandard.org/ [specification v0.1; conformance is self-declared and unverified]
+* Park, E., Roesti, M., Deng, W. H., Barreto, R., Tahaei, M., Holstein, K., Hong, J., & Eslami, M. (2026). Who Does What in AI Auditing? Designing Human–AI Collaboration for Auditing Generative AI. Carnegie Mellon University / eBay. [arXiv:2609.24986v1]
 * Perez, E., Ringer, S., Lukošiūtė, K., Nguyen, K., et al. (2023). Discovering Language Model Behaviors with Model-Written Evaluations. Findings of the Association for Computational Linguistics: ACL 2023, 13387–13434. [arXiv:2212.09251]
 * Prinos, K., Brush, L., & Denton, C. (2026). Honeyquest for LLMs: Rethinking Cyber Deception for AI Attackers. Horizon3.ai. [arXiv:2606.21037v1]
 * Qi, R., Wright, B., MacDiarmid, M., & Hubinger, E. (2026, August). Training a Misaligned Reward Seeker. Anthropic Alignment Science Blog. https://alignment.anthropic.com/2026/reward-seeker/ [model organism deliberately trained on 80 known-hackable environments as a pessimistic proxy; cyber evaluations fully simulated, all tool calls produced by another model]
 * Ryd, E., Bartsch, H., Stastny, J., Benton, J., & Hebbar, V. (2026). Removing Sandbagging in LLMs by Training with Weak Supervision. Proceedings of the 43rd International Conference on Machine Learning (ICML), PMLR 306. [arXiv:2604.22082v2]
+* Russinovich, M., Salem, A., & Eldan, R. (2025). Great, Now Write an Article About That: The Crescendo Multi-Turn LLM Jailbreak Attack. 34th USENIX Security Symposium (USENIX Security 25), 2421–2440. [arXiv:2404.01833v3]
 * Salvi, F., Horta Ribeiro, M., Gallotti, R., & West, R. (2025). On the conversational persuasiveness of GPT-4. Nature Human Behaviour, 9(8), 1645–1653. [arXiv:2403.14380]
 * Schlatter, J., Weinstein-Raun, B., & Ladish, J. (2025). Shutdown Resistance in Large Language Models. Palisade Research. [arXiv:2509.14260]
 * Shah, R., Varma, V., Kumar, R., Phuong, M., Krakovna, V., Uesato, J., & Kenton, Z. (2022). Goal Misgeneralization: Why Correct Specifications Aren't Enough For Correct Goals. DeepMind. [arXiv:2210.01790]
