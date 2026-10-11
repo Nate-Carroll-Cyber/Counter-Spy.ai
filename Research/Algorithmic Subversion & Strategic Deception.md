@@ -1,5 +1,5 @@
 # Algorithmic Subversion & Strategic Deception 
-_(as of 20 September 2026)_
+_(as of 09 October 2026)_
 
 Counterintelligence is the oldest institutional answer to a problem AI security has just inherited, namely extracting useful work from an agent whose cooperation cannot be verified and whose loyalty cannot be assumed. Decades of doctrine on elicitation, fabrication, double agents, and defection-in-place were built for exactly the behaviors now surfacing in frontier models under evaluation.
 
